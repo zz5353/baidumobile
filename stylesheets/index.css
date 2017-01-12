@@ -1,0 +1,588 @@
+/*reset*/
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: 13px;
+    font-family: arial;
+    height: 100%;
+    white-space: nowrap;
+}
+
+img {
+    border-style: none;
+}
+
+
+/*响应式布局*/
+
+@media only screen and (max-width:1025px) {
+    .header,
+    .footer {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:1025px) {
+    .pad,
+    .phone,
+    .header_pad,
+    .header_phone {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .header_pad,
+    .pad {
+        display: none;
+    }
+}
+
+
+/*电脑端头部导航部分*/
+
+.header {
+    height: 50px;
+    width: 510px;
+    float: right;
+}
+
+.header a:link {
+    color: #0F0F0F
+}
+
+.header a:visited {
+    color: #0F0F0F
+}
+
+.header a:hover {
+    color: #0000FF
+}
+
+.header a:active {
+    color: #0000FF;
+}
+
+.nav {
+    height: 40px;
+    font-size: 13px;
+    left: 100px;
+    white-space: nowrap;
+}
+
+.nav span {
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    float: left;
+    text-align: center;
+    line-height: 40px;
+}
+
+.header a {
+    color: #000;
+    display: block;
+    margin: 0px 10px;
+}
+
+#login {
+    margin-right: 15px;
+}
+
+.setting_li {
+    float: none;
+    margin-left: -40px;
+    height: 25px;
+    padding: 0px 0px;
+    line-height: 25px;
+}
+
+.setting_li a {
+    padding: 0px 0px;
+    text-decoration: none;
+    margin: 0px;
+}
+
+.setting_li a:hover {
+    color: #FFFFFF;
+    background-color: #1E90FF;
+    text-decoration: none;
+}
+
+.setting_ul {
+    border: 1px solid #C4C4C4;
+    display: none;
+    position: absolute;
+    margin-top: -5px;
+}
+
+.more_li {
+    float: none;
+    margin-left: -55px;
+    margin-top: 30px;
+    padding: 0px 0px;
+    height: 50px;
+    line-height: 15px;
+    text-align: center;
+}
+
+#more_li {
+    text-decoration: underline;
+}
+
+.more_li img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+.more_li a:link {
+    color: #666;
+    text-decoration: none;
+}
+
+.more_li a:visited {
+    color: #666;
+    text-decoration: none;
+}
+
+.more_li a:hover {
+    color: #666;
+    text-decoration: underline;
+    text-decoration-color: #666;
+}
+
+.more_li a:active {
+    color: #0000FF;
+    text-decoration: underline;
+    text-decoration-color: #0000FF;
+}
+
+.more_ul {
+    display: none;
+    position: absolute;
+    text-align: center;
+}
+
+.setting {
+    display: inline-block;
+    width: 60px;
+    margin-left: -12px;
+}
+
+#more {
+    background-color: #3385ff;
+    color: #F4F4F4;
+    width: 60px;
+    height: 24px;
+    margin-top: 8px;
+    line-height: 24px;
+}
+
+.setting:hover .setting_ul {
+    display: block;
+}
+
+.more:hover .more_ul {
+    display: block;
+}
+
+#more:hover {
+    background-color: #F4F4F4;
+    color: #0F0F0F;
+    cursor: default;
+}
+
+#main {
+    min-height: 500px;
+    position: relative;
+    height: 100%;
+}
+
+
+/*平板端头部导航*/
+
+.header_pad {
+    position: absolute;
+    right: 0;
+}
+
+.log {
+    background: url(../images/icon_menu_b0b60d01.png) no-repeat;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.set {
+    background: url(../images/icon_menu_b0b60d01.png) no-repeat;
+    background-position: -53px 0;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.mor {
+    background: url(../images/icon_menu_b0b60d01.png) no-repeat;
+    background-position: -106px 0;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+}
+
+
+/*手机端头部天气信息*/
+
+.header_phone {
+    height: 34px;
+    width: 120px;
+    position: relative;
+    opacity: 0.7;
+    z-index: 100;
+}
+
+.header_phone .weather img {
+    width: 24px;
+    margin-top: 12px;
+    float: left;
+}
+
+.header_phone .weather #weather_num {
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 30px;
+    float: left;
+    padding-top: 6px;
+}
+
+.header_phone .weather p {
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+}
+
+
+/*中间搜索框部分*/
+
+.content {
+    width: 100%;
+    /*
+    text-align: center;*/
+    position: absolute;
+    top: 18%;
+}
+
+.content img {
+    display: block;
+    margin: 0px auto 0px auto;
+    width: 270px;
+    height: 129px;
+}
+
+.content form {
+    box-sizing: border-box;
+    width: 640px;
+    margin: 0px auto 0px auto;
+    padding: 0;
+    position: relative;
+}
+
+.content input {
+    margin: 0;
+    padding: 0;
+    width: 540px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #CCCCCC;
+    font-size: 16px;
+    padding-left: 5px;
+    position: relative;
+    background: url(../images/camera1.png) right 10px top 10px no-repeat;
+}
+
+input:hover {
+    border: 1px solid #B7B7B7;
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid #3385ff;
+    outline: none;
+}
+
+.content button {
+    margin: 0px;
+    padding: 0px;
+    width: 100px;
+    height: 38px;
+    background-color: #3385ff;
+    border: 1px solid #3385ff;
+    font-size: 15px;
+    color: #FCFCFC;
+    cursor: pointer;
+}
+
+
+
+button:visited {
+    background-color: #3385ff;
+}
+button:hover {
+    background-color: #2d78f4
+}
+button:active {
+    background-color: #436EEE;
+    color: #DCDCDC
+}
+
+/*平板端布局*/
+@media only screen and (min-width:767px) and (max-width:1024px) {
+    button {
+        display: none;
+    }
+    
+    .content {
+        top: 5%;
+    }
+    
+    .container img {
+        display: inline;
+    }
+    
+    .content input {
+        width: 100%;
+        background: url(../images/microphone_13.53488372093px_1201154_easyicon.net.png) 580px 7px no-repeat, url(../images/camera1.png) 610px 10px no-repeat;
+    }
+    
+    .phone,
+    .header_phone {
+        display: none;
+    }
+}
+
+/*手机端布局*/
+@media only screen and (max-width:767px) {
+    .content {
+        top: 10px;
+        width: 96%;
+        margin-left: 2%;
+    }
+    
+    .content form {
+        max-width: 100%;
+        width: auto;
+        height: 38px;
+    }
+    
+    .content img {
+        width: 200px;
+        height: auto;
+    }
+    
+    .content input {
+        width: 100%;
+        float: left;
+        position: relative;
+        background: url(../images/microphone_13.53488372093px_1201154_easyicon.net.png) right 80px top 7px no-repeat;
+    }
+    
+    .content button {
+        width: 70px;
+        float: left;
+        position: absolute;
+        right: 0;
+    }
+}
+
+/*平板端内容*/
+.pad .container {
+    width: 640px!important;
+    box-sizing: border-box;
+    padding: 0!important;
+    position: absolute;
+    left: 50%;
+    margin-left: -305px !important;
+    margin-top: 100px;
+}
+.pad .container .row {
+    width: 100%;
+}
+.pad .container .row>div {
+    padding: 0 0 0 10px;
+    text-align: left;
+}
+.pad .row img {
+    width: 15px;
+    height: 16px;
+}
+.pad a {
+    color: #222;
+}
+.pad .col-sm-2 {
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #aaa;
+}
+.pad .col-sm-12 {
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #aaa;
+    margin-top: 30px;
+}
+.pad .col-sm-4 {
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #aaa;
+}
+.pad .new {
+    margin-left: 5px;
+    background-color: #f00;
+    color: #fff;
+    font-size: 0.8em;
+}
+.pad .col-sm-3 {
+    border: transparent !important;
+}
+.pad .pic {
+    margin-top: 0;
+    height: 230px!important;
+}
+.pad #pic_more {
+    float: right;
+    font-size: 13px;
+    margin-right: 5px;
+}
+.pad .pic img {
+    margin-top: 10px;
+    width: 150px;
+    height: 100px;
+}
+
+/*手机端内容*/
+.phone {
+    margin-top: 20px;
+    text-align: center;
+}
+.phone a {
+    color: #333;
+}
+.phone .nav_phone span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 2px;
+    background: url(../images/ns_diff_color_v2_5abf864a.png)no-repeat;
+}
+.phone .nav_phone1 span {
+    background-position: 50% -300px;
+}
+.phone .nav_phone2 span {
+    background-position: 50% -450px;
+}
+.phone .nav_phone3 span {
+    background-position: 50% -375px;
+}
+.phone .nav_phone4 span {
+    background-position: 50% -525px;
+}
+.phone .nav_phone5 span {
+    background-position: 50% -475px;
+}
+.phone .nav_phone6 span {
+    background-position: 50% -350px;
+}
+.phone {
+    font-size: 15px;
+    text-align: left;
+}
+.phone .articles {
+    margin-top: 20px;
+}
+.phone .articles .art {
+    margin-bottom: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.phone .articles img {
+    width: 33.3%;
+    display: inline-block;
+}
+.phone .articles .origin,
+.date {
+    font-size: 11px;
+    color: #666;
+}
+.phone .articles .hotpot {
+    color: #666;
+    font-size: 10px;
+    display: inline-block;
+    border: 1px solid #f00;
+}
+
+/*电脑端底部信息*/
+.footer {
+    position: absolute;
+    width: 640;
+    bottom: 44px;
+    left: 50%;
+    margin-left: -320px;
+    line-height: 2em;
+    color: #999;
+}
+.footer b {
+    color: #666;
+}
+.qr_pic {
+    height: 60px;
+    width: 60px;
+    position: relative;
+    top: -20px;
+}
+.beian {
+    width: 17px;
+    height: 14px;
+}
+.footer span {
+    display: inline-block;
+    position: relative;
+    top: -10px;
+}
+.footer div {
+    display: inline-block;
+}
+.footer a:link {
+    color: #999;
+}
+.footer a:visited {
+    color: #999;
+}
+.footer a:hover {
+    color: #999;
+}
+.footer a:active {
+    color: #999;
+}
+.bor1 {
+    margin-left: 15px;
+}
+.bor2 {
+    margin-left: 25px;
+}
+.icp {
+    width: 17px;
+    height: 17px;
+    margin-bottom: -5px;
+}
